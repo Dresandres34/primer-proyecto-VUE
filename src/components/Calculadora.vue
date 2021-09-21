@@ -9,6 +9,9 @@
     <br>
     <input type="number" id="num2" placeholder="Numero 2" v-model="numero_2"/>
     <br>
+    <br>
+    <input type="number" id="num3" placeholder="Numero 3" v-model="numero_3"/>
+    <br>
     <!---crear boton para llamar metodo--->
     <!--button @click="">Sumar</button>---->
   </div>
@@ -21,13 +24,14 @@ export default {
         return {
             subtitulo: 'Calculadora',
             numero_1: null,
-            numero_2: null
+            numero_2: null,
+            numero_3: null
         }
     },
     methods: {
-        sumar(numero_1, numero_2){
+        sumar(numero_1, numero_2, numero_3){
             console.log("metodo sumar")
-            console.log("Resultado: ",(numero_1+numero_2))
+            console.log("Resultado: ",(numero_1+numero_2+numero_3))
         }
     },
     created : ()=>{
