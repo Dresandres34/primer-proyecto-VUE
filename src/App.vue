@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/ProyectoCiclo3_Mesa de trabajo 1.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!---HelloWorld msg="bienvenido a la creación de app web con VUE"/----->
+    <calculadora/>
+
+    
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script> /* logica de app, importación de componenetes*/
+import Calculadora from './components/Calculadora.vue'
+/*import HelloWorld from './components/HelloWorld.vue' /* ruta de componente*/
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Calculadora /*se colocan los componentes importados */
+    /*HelloWorld*/
   }
 }
 </script>
