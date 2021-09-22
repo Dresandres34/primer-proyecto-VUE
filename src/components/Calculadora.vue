@@ -14,8 +14,16 @@
     <br>
     <br>
     <br>
-    <!---crear boton para llamar metodo--->
+    <!---crear boton para llamar metodo sumar --->
     <button @click="sumar(numero_1, numero_2,numero_3)">Sumar</button>
+    <br>
+    <br>
+    <!---crear boton para llamar metodo multiplicar--->
+    <button @click="multiplicar">Multiplicar</button>
+    <br>
+    <br>
+    <!---crear boton para llamar metodo multiplicar--->
+    <button @click="dividir">Dividir</button>
     <br>
     <br>
     <span id="resultado">Resultado: {{resultado}}</span>
@@ -36,11 +44,25 @@ export default {
     },
     methods: {
         sumar(numero_1, numero_2, numero_3){
-            console.log("metodo sumar")
+            console.log("metodo sumar");
             //sin casteo concatena los valores como string
-            console.log("Concatena: ",(numero_1+numero_2+numero_3))
+            console.log("Concatena: ",(numero_1+numero_2+numero_3));
             // sumar valores
-            this.resultado = parseInt(numero_1)+parseInt(numero_2)+parseInt(numero_3)
+            this.resultado = parseInt(numero_1)+parseInt(numero_2)+parseInt(numero_3);
+        },
+        // Realizar el metodo de multiplciar sin recibir para metros 
+        multiplicar (){
+            console.log("metodo Multiplicar");
+            this.resultado = parseFloat(this.numero_1)* parseFloat(this.numero_2)* parseFloat(this.numero_3);
+        },
+        //realizar metodo dividir, vierificando que el numero_2 no sea 0
+        dividir (){
+            console.log("metodo dividir");
+            if (parseFloat(this.numero_2)>0) {
+                this.resultado = parseFloat (this.numero_1)/ parseFloat(this.numero_2) 
+            } else {
+                alert("No es posible realizar la división")
+            };
         }
     },
     created : ()=>{
